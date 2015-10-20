@@ -1,0 +1,659 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="东坡顶  看云涌" />
+
+
+
+  <meta name="keywords" content="建站技术," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="自从上个网站又挂了以后，早就想着再做一个界面简洁、速度快、可以随心改动的Blog了。直到看到了一个使用Hexo制作的网站，被它的简洁所吸引，决定使用Hexo。折腾了不少时间，从昨天下午到今天中午，总算是弄好了。下边把具体过程记录一下，以备以后使用。
+1.什么是Hexo？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用Hexo新建一个静态博客的过程">
+<meta property="og:url" content="http://dongpod.site90.com/2015/09/08/hexoblog/index.html">
+<meta property="og:site_name" content="东坡顶上">
+<meta property="og:description" content="自从上个网站又挂了以后，早就想着再做一个界面简洁、速度快、可以随心改动的Blog了。直到看到了一个使用Hexo制作的网站，被它的简洁所吸引，决定使用Hexo。折腾了不少时间，从昨天下午到今天中午，总算是弄好了。下边把具体过程记录一下，以备以后使用。
+1.什么是Hexo？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主">
+<meta property="og:updated_time" content="2015-10-03T13:21:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用Hexo新建一个静态博客的过程">
+<meta name="twitter:description" content="自从上个网站又挂了以后，早就想着再做一个界面简洁、速度快、可以随心改动的Blog了。直到看到了一个使用Hexo制作的网站，被它的简洁所吸引，决定使用Hexo。折腾了不少时间，从昨天下午到今天中午，总算是弄好了。下边把具体过程记录一下，以备以后使用。
+1.什么是Hexo？Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'hide'
+  };
+</script>
+
+  <title> 用Hexo新建一个静态博客的过程 | 东坡顶上 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">东坡顶上</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              用Hexo新建一个静态博客的过程
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-09-08T15:28:45+08:00" content="2015-09-08">
+            2015-09-08
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>自从上个网站又挂了以后，早就想着再做一个界面简洁、速度快、可以随心改动的<strong>Blog</strong>了。直到看到了一个使用<strong><code>Hexo</code></strong>制作的网站，被它的简洁所吸引，决定使用<strong><code>Hexo</code></strong>。<br>折腾了不少时间，从昨天下午到今天中午，总算是弄好了。下边把具体过程记录一下，以备以后使用。</p>
+<h2 id="1-什么是Hexo？">1.什么是Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h2 id="2-安装Node-js环境">2.安装Node.js环境</h2><p>Hexo需要<a href="https://nodejs.org" target="_blank" rel="external">Node.js</a>环境，首先下载了<a href="https://nodejs.org/dist/v0.12.7/node-v0.12.7.tar.gz" target="_blank" rel="external">源代码包</a>,编译时出现错误，无法安装。正好网站上还有编译好的<a href="https://nodejs.org/dist/v0.12.7/node-v0.12.7-linux-x64.tar.gz" target="_blank" rel="external">二进制文件</a>(64位v0.12.7)，下载下来后解压缩并复制到/opt文件夹。<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">$ tar -zxvf node-v0<span class="number">.12</span><span class="number">.7</span>-linux-x64.tar.gz /tmp</span><br><span class="line">$ mv node-v0<span class="number">.12</span><span class="number">.7</span>-linux-x64 /opt/node</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>这时还不能直接使用，输入<strong><code>npm</code></strong>命令时会报错：找不到module<br>正确使用，还需要设定环境变量，有3种方法：</p>
+<ul>
+<li>直接在shell中输入<figure class="highlight xquery"><table><tr><td class="code"><pre><span class="line">$ export NODE_HOME=/opt/node  </span><br><span class="line">$ export PATH=<span class="variable">$PATH</span>:<span class="variable">$NODE</span>_HOME/bin  </span><br><span class="line">$ export NODE_PATH=<span class="variable">$PATH</span>:<span class="variable">$NODE</span>_HOME/lib/node_modules</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>就行了，但是仅对当前shell有效，退出后就失效了。</p>
+<ul>
+<li>编辑～/.bashrc或～/.bash_profile文件，在其中加入如下变量<figure class="highlight xquery"><table><tr><td class="code"><pre><span class="line">NODE_HOME=/opt/node  </span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$NODE</span>_HOME/bin  </span><br><span class="line">NODE_PATH=<span class="variable">$PATH</span>:<span class="variable">$NODE</span>_HOME/lib/node_modules  </span><br><span class="line">export NODE_HOME</span><br><span class="line">export PATH</span><br><span class="line">export NODE_PATH</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>然后输入<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ～/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<p>使配置生效<br>这样仅对当前用户有效，重启计算机或shell都不会失效</p>
+<ul>
+<li>编辑/etc/profile在其中加入同上变量</li>
+</ul>
+<p>然后输入<br><figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line">$ <span class="keyword">source</span> <span class="regexp">/etc/</span>profile</span><br></pre></td></tr></table></figure></p>
+<p>使配置生效<br>这样是对所有用户生效</p>
+<h2 id="3-安装Hexo">3.安装Hexo</h2><p>根据网上搜索和<a href="https://hexo.io" target="_blank" rel="external">Hexo官网</a>的方法，可以使用<strong><code>npm</code></strong>命令安装<br><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">$ npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> hexo-cli</span></span><br></pre></td></tr></table></figure></p>
+<p>Hexo安装完成后，执行以下命令<br><figure class="highlight crystal"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo init &lt;folder&gt;</span><br><span class="line"><span class="variable">$ </span>cd &lt;folder&gt;</span><br><span class="line"><span class="variable">$ </span>npm install</span><br></pre></td></tr></table></figure></p>
+<p>即可建立网站文件夹并生成指定文件。</p>
+<h2 id="4-配置Hexo">4.配置Hexo</h2><p>Hexo的配置文件是网站安装目录下的<strong><code>_config.yml</code></strong>,用编辑器打开后进行编辑，按照<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">Hexo配置</a>并参照<a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="external">NexT主题设定</a>，对以下选项进行了设定</p>
+<blockquote>
+<ul>
+<li>title:    网站标题</li>
+<li>description:    网站描述</li>
+<li>author:     作者名字</li>
+<li>language:    使用语言，其中英文<code>en</code>,简体中文<code>zh_Hans</code></li>
+<li>highlight:    <strong><code>这行不能填，否则会报错</code></strong><br>line_number:    改为false,代码框就没有前面的计数了</li>
+<li>theme:    改为下载的主题文件夹名称</li>
+<li>新增avatar： /images/avatar.jpg    加入头像</li>
+<li>新增since: 2011    底部显示站点时间为2011-今年</li>
+</ul>
+</blockquote>
+<h2 id="5-下载并配置主题">5.下载并配置主题</h2><p>Hexo有很多主题可以使用，<a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo网站</a>和<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">这里</a>都有很多，本站用的是<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT</a>,比较简洁。</p>
+<ul>
+<li>下载主题采用Git克隆方式<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">$ <span class="keyword">cd</span> &lt;网站目录&gt;</span><br><span class="line">$ git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/iissnan/hexo-theme-<span class="keyword">next</span> themes/<span class="keyword">next</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>然后，编辑网站目录下的<strong><code>_config.yml</code></strong>文件，将<code>themes</code>标签改为<code>next</code>即可启用。</p>
+<h2 id="6-新建并编写文章">6.新建并编写文章</h2><p>新建文章<br><figure class="highlight livecodeserver"><table><tr><td class="code"><pre><span class="line">$ hexo <span class="built_in">new</span> <span class="built_in">post</span> &lt;title&gt;</span><br></pre></td></tr></table></figure></p>
+<p>用编辑器编辑<strong><code>source/_posts/title.md</code></strong>文件即可。</p>
+<p>新建页面<br><figure class="highlight axapta"><table><tr><td class="code"><pre><span class="line">$ hexo <span class="keyword">new</span> page <span class="string">"tags"</span> <span class="preprocessor">#新建tags页面</span></span><br><span class="line">$ hexo <span class="keyword">new</span> page <span class="string">"about"</span> <span class="preprocessor">#新建about页面</span></span><br></pre></td></tr></table></figure></p>
+<p>tags页面无需编辑，about页面需编辑<strong><code>source/about/index.md</code></strong>文件。</p>
+<h2 id="7-启用服务器并测试">7.启用服务器并测试</h2><p>用下面命令即可启动服务器<br><figure class="highlight crystal"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo server</span><br><span class="line">或者</span><br><span class="line"><span class="variable">$ </span>hexo s</span><br></pre></td></tr></table></figure></p>
+<p>浏览器输入http：//localhost：4000即可预览网站。</p>
+<h2 id="8-生成静态文件并部署">8.生成静态文件并部署</h2><p>生成静态文件<br><figure class="highlight crystal"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo generate</span><br></pre></td></tr></table></figure></p>
+<p>因为本站使用的是<a href="http://www.000webhostcom" target="_blank" rel="external">000webhost</a>空间，通过ftp部署时不成功，因此将<code>public</code>文件夹打包后上传到了空间进行部署。</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/建站技术/" rel="tag">#建站技术</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/09/15/yituanma/" rel="prev">今天就是一团麻</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/09/08/test1/" rel="next">用markdown写的一些测试</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/avatar.jpg" alt="DongPod" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">DongPod</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">东坡顶  看云涌</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-什么是Hexo？"><span class="nav-number">1.</span> <span class="nav-text">1.什么是Hexo？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装Node-js环境"><span class="nav-number">2.</span> <span class="nav-text">2.安装Node.js环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-安装Hexo"><span class="nav-number">3.</span> <span class="nav-text">3.安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-配置Hexo"><span class="nav-number">4.</span> <span class="nav-text">4.配置Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-下载并配置主题"><span class="nav-number">5.</span> <span class="nav-text">5.下载并配置主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-新建并编写文章"><span class="nav-number">6.</span> <span class="nav-text">6.新建并编写文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-启用服务器并测试"><span class="nav-number">7.</span> <span class="nav-text">7.启用服务器并测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-生成静态文件并部署"><span class="nav-number">8.</span> <span class="nav-text">8.生成静态文件并部署</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp;  2014 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DongPod</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
+
+  
+
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>

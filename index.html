@@ -1,0 +1,758 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="东坡顶  看云涌" />
+
+
+
+  <meta name="keywords" content="Hexo,next" />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="东坡顶  看云涌">
+<meta property="og:type" content="website">
+<meta property="og:title" content="东坡顶上">
+<meta property="og:url" content="http://dongpod.site90.com/index.html">
+<meta property="og:site_name" content="东坡顶上">
+<meta property="og:description" content="东坡顶  看云涌">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="东坡顶上">
+<meta name="twitter:description" content="东坡顶  看云涌">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'hide'
+  };
+</script>
+
+  <title> 东坡顶上 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <div class="container one-column 
+   page-home 
+">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">东坡顶上</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+  <section id="posts" class="posts-expand">
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/09/30/vmwarediskexpend/" itemprop="url">
+                VMWare下扩展硬盘容量并增大根分区
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-09-30T17:02:11+08:00" content="2015-09-30">
+            2015-09-30
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>这两天在实验虚拟机安装Gentoo，按照wiki的说明只分配了6G的硬盘，但是安装完系统又稍微装了点软件后根分区就只剩几百M的容量了，只好再扩大一下了。</p>
+<p>###1.扩展VMware虚拟机的硬盘容量<br>两种方法：</p>
+<ul>
+<li>10.0版本以上，点击<code>虚拟机</code>-&gt;<code>设置</code>，选中需要扩展的硬盘，<code>实用工具</code>-&gt;<code>扩展</code>，输入容量后点击<code>扩展</code>按钮即可。</li>
+<li>10.0版本以下，没有图形工具，使用安装目录下的命令行工具<code>vmware-vdiskmanager.exe</code>，<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line">  <span class="comment"># -x 参数为扩展硬盘，后跟需要扩展到的容量，文件名有空格时需要用" "引起来</span></span><br><span class="line"><span class="string">\VMware</span> PATH<span class="string">\vmware-vdiskmanager.exe</span> -x <span class="number">80</span>G <span class="string">\硬盘位置\硬盘文件名.vmdk</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>很是方便。</p>
+<p>###2.linux下扩大根分区（/）大小<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/09/30/vmwarediskexpend/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/09/15/yituanma/" itemprop="url">
+                今天就是一团麻
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-09-15T16:32:54+08:00" content="2015-09-15">
+            2015-09-15
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h1 id="今天到底做了什么？！">今天到底做了什么？！</h1><blockquote>
+<p>稍微复习了一下<strong>vim</strong>的用法，然后装了一个插件<code>vim-markdown</code>，用来显示markdown语法高亮的，但是不太会用。<br>然后，因为下的几个markdown编辑器都安装失败了，于是打算只装一个预览。在网上找到一个chrome插件<code>Markdown Preview Plus</code>，按照作者的说明把”Allow acces to file URLs”打开了，但是仍然不能查看本地文件，重启几次chrome都不成功，郁闷的不行。@_@</p>
+</blockquote>
+<h2 id="然后又做了什么？！！">然后又做了什么？！！</h2><p> wordpress速度极慢，每次还有广告，决定迁移本站。看大家都用github，于是周末申请了一个github帐号，上午部署上了。<br>现在看到的就是github上的效果了。^_^</p>
+<h3 id="还能做些什么？!!!">还能做些什么？!!!</h3><blockquote>
+<p><em>好像没有了！！！</em></p>
+</blockquote>
+<h4 id="最后测试一下photos标签">最后测试一下<code>photos</code>标签</h4><ul>
+<li>没有成功  $_$</li>
+</ul>
+<hr>
+<p><img src="http://www.globaltimes.cn/Portals/0/attachment/2011/0d2d37dc-894d-4612-8a68-c1ba89e95a48.jpg" alt="cute dog">    </p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/09/08/hexoblog/" itemprop="url">
+                用Hexo新建一个静态博客的过程
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-09-08T15:28:45+08:00" content="2015-09-08">
+            2015-09-08
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>自从上个网站又挂了以后，早就想着再做一个界面简洁、速度快、可以随心改动的<strong>Blog</strong>了。直到看到了一个使用<strong><code>Hexo</code></strong>制作的网站，被它的简洁所吸引，决定使用<strong><code>Hexo</code></strong>。<br>折腾了不少时间，从昨天下午到今天中午，总算是弄好了。下边把具体过程记录一下，以备以后使用。</p>
+<h2 id="1-什么是Hexo？">1.什么是Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h2 id="2-安装Node-js环境">2.安装Node.js环境</h2><p>Hexo需要<a href="https://nodejs.org">Node.js</a>环境，首先下载了<a href="https://nodejs.org/dist/v0.12.7/node-v0.12.7.tar.gz">源代码包</a>,编译时出现错误，无法安装。正好网站上还有编译好的<a href="https://nodejs.org/dist/v0.12.7/node-v0.12.7-linux-x64.tar.gz">二进制文件</a>(64位v0.12.7)，下载下来后解压缩并复制到/opt文件夹。<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">$ tar -zxvf node-v0<span class="number">.12</span><span class="number">.7</span>-linux-x64.tar.gz /tmp</span><br><span class="line">$ mv node-v0<span class="number">.12</span><span class="number">.7</span>-linux-x64 /opt/node</span><br></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/09/08/hexoblog/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/09/08/test1/" itemprop="url">
+                用markdown写的一些测试
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-09-08T10:25:45+08:00" content="2015-09-08">
+            2015-09-08
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h3 id="不知该说些什么，忧愁它围绕这我">不知该说些什么，忧愁它围绕这我</h3><p>第一次用<code>markdown</code>写文章，感觉好是奇妙。简单的标记，可以显示出丰富的格式。就是现在掌握不多，还不知道怎么做。<del>就是就是！！</del></p>
+<h4 id="链接测试">链接测试</h4><blockquote>
+<p> 这里是我的<a href="http://dongpod.site90.com">网站地址</a>.</p>
+<p> 这是一朵小花——<img src="/uploads/flower.jpg" alt="flower.jpg"></p>
+</blockquote>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/09/08/test1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/09/08/hello/" itemprop="url">
+                HELLO
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-09-08T09:40:45+08:00" content="2015-09-08">
+            2015-09-08
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>原来在三蛋建了一个网站，用的是<strong>wordpress</strong>。后来有段时间没有用过，结果被删了，原来的数据也都没留下来。重新启用以后，没过多长时间又说发邮件过多，被ban了，也是莫名其妙的。</p>
+<p>于是又重新申请了一个，这回不用<strong>wordpress</strong>了，弄一个简单的<code>HEXO</code>，看着也清爽。</p>
+<p>Let’s enjoy it.</p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2014/10/01/oldart/" itemprop="url">
+                过去的旧文章
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2014-10-01T11:20:30+08:00" content="2014-10-01">
+            2014-10-01
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>网站原来是用<strong><code>wordpress</code></strong>的,做好以后也没有写几篇文章，后来网站被删，也就都丢失了。现在想回忆一下，也是不能够再想起来了<br>&gt;<br>&gt;<br>&gt;<br>&gt;</p>
+<p>于是乎，就这样吧。<br><img src="http://img4q.duitang.com/uploads/item/201309/15/20130915134806_UztQR.jpeg" alt="tu"></p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+ </div>
+
+        
+
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/avatar.jpg" alt="DongPod" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">DongPod</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">东坡顶  看云涌</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp;  2014 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DongPod</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
+
+  
+
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
