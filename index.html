@@ -166,6 +166,145 @@
           
           
             
+              <a class="post-title-link" href="/2015/11/03/dotoday/" itemprop="url">
+                dotoday
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-03T17:14:37+08:00" content="2015-11-03">
+            2015-11-03
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"></span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/10/23/ubuntuproxy/" itemprop="url">
+                Ubuntu服务器设置代理
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-10-23T08:54:12+08:00" content="2015-10-23">
+            2015-10-23
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>上次在虚拟机上装了Ubuntu14.04服务器用来做测试，因为只在内网使用，而且路由器上做了MAC地址绑定，改动比较麻烦，因此服务器只是设定了内网地址。但是Ubuntu更新时需要连接外网，而且也有连接外网下载一些东西的需要，就需要设定代理了。在网上搜索，找到了几个方法。</p>
+<ul>
+<li>直接在终端中输入：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">export</span> http_proxy=http://username:password@ip:port  </span><br><span class="line"><span class="comment"># https代理将http_proxy改为https_proxy</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>本设置仅对当前终端有效，退出终端后失效。</p>
+<ul>
+<li>仅针对apt-get设定代理<br>用编辑软件打开<code>/etc/apt/apt.conf</code>文件，没有的话可以创建，在其中加入<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">Acquire</span>:<span class="value">:http::Proxy <span class="string">"http://username:password@ip:port"</span></span></span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如有ftp或https可以替换http并加入文件，保存即可</p>
+<ul>
+<li>永久设定代理<br>编辑<code>~/.bashrc</code>文件，加入：<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">http_proxy=http:<span class="comment">//username:password@ip:port</span></span><br><span class="line"><span class="keyword">export</span> http_proxy</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>保存后，输入命令<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></p>
+<p>这样，新打开的终端也可以使用了</p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/09/30/vmwarediskexpend/" itemprop="url">
                 VMWare下扩展硬盘容量并增大根分区
               </a>
@@ -601,7 +740,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -649,7 +788,7 @@
       <div class="footer-inner"> <div class="copyright" >
   
   &copy; &nbsp;  2014 - 
-  <span itemprop="copyrightYear">2015</span>
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart"></i>
   </span>

@@ -39,28 +39,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="这两天在实验虚拟机安装Gentoo，按照wiki的说明只分配了6G的硬盘，但是安装完系统又稍微装了点软件后根分区就只剩几百M的容量了，只好再扩大一下了。
-###1.扩展VMware虚拟机的硬盘容量两种方法：
+<meta name="description" content="上次在虚拟机上装了Ubuntu14.04服务器用来做测试，因为只在内网使用，而且路由器上做了MAC地址绑定，改动比较麻烦，因此服务器只是设定了内网地址。但是Ubuntu更新时需要连接外网，而且也有连接外网下载一些东西的需要，就需要设定代理了。在网上搜索，找到了几个方法。
 
-10.0版本以上，点击虚拟机-&amp;gt;设置，选中需要扩展的硬盘，实用工具-&amp;gt;扩展，输入容量后点击扩展按钮即可。
-10.0版本以下，没有图形工具，使用安装目录下的命令行工具vmware-">
+直接在终端中输入：$ export http_proxy=http://username:password@ip:port">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VMWare下扩展硬盘容量并增大根分区">
-<meta property="og:url" content="http://dongpod.site90.com/2015/09/30/vmwarediskexpend/index.html">
+<meta property="og:title" content="Ubuntu服务器设置代理">
+<meta property="og:url" content="http://dongpod.site90.com/2015/10/23/ubuntuproxy/index.html">
 <meta property="og:site_name" content="东坡顶上">
-<meta property="og:description" content="这两天在实验虚拟机安装Gentoo，按照wiki的说明只分配了6G的硬盘，但是安装完系统又稍微装了点软件后根分区就只剩几百M的容量了，只好再扩大一下了。
-###1.扩展VMware虚拟机的硬盘容量两种方法：
+<meta property="og:description" content="上次在虚拟机上装了Ubuntu14.04服务器用来做测试，因为只在内网使用，而且路由器上做了MAC地址绑定，改动比较麻烦，因此服务器只是设定了内网地址。但是Ubuntu更新时需要连接外网，而且也有连接外网下载一些东西的需要，就需要设定代理了。在网上搜索，找到了几个方法。
 
-10.0版本以上，点击虚拟机-&amp;gt;设置，选中需要扩展的硬盘，实用工具-&amp;gt;扩展，输入容量后点击扩展按钮即可。
-10.0版本以下，没有图形工具，使用安装目录下的命令行工具vmware-">
-<meta property="og:updated_time" content="2015-10-03T23:21:43.000Z">
+直接在终端中输入：$ export http_proxy=http://username:password@ip:port">
+<meta property="og:updated_time" content="2015-10-23T02:36:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VMWare下扩展硬盘容量并增大根分区">
-<meta name="twitter:description" content="这两天在实验虚拟机安装Gentoo，按照wiki的说明只分配了6G的硬盘，但是安装完系统又稍微装了点软件后根分区就只剩几百M的容量了，只好再扩大一下了。
-###1.扩展VMware虚拟机的硬盘容量两种方法：
+<meta name="twitter:title" content="Ubuntu服务器设置代理">
+<meta name="twitter:description" content="上次在虚拟机上装了Ubuntu14.04服务器用来做测试，因为只在内网使用，而且路由器上做了MAC地址绑定，改动比较麻烦，因此服务器只是设定了内网地址。但是Ubuntu更新时需要连接外网，而且也有连接外网下载一些东西的需要，就需要设定代理了。在网上搜索，找到了几个方法。
 
-10.0版本以上，点击虚拟机-&amp;gt;设置，选中需要扩展的硬盘，实用工具-&amp;gt;扩展，输入容量后点击扩展按钮即可。
-10.0版本以下，没有图形工具，使用安装目录下的命令行工具vmware-">
+直接在终端中输入：$ export http_proxy=http://username:password@ip:port">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -70,7 +64,7 @@
   };
 </script>
 
-  <title> VMWare下扩展硬盘容量并增大根分区 | 东坡顶上 </title>
+  <title> Ubuntu服务器设置代理 | 东坡顶上 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -177,7 +171,7 @@
           
           
             
-              VMWare下扩展硬盘容量并增大根分区
+              Ubuntu服务器设置代理
             
           
         </h1>
@@ -186,8 +180,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-09-30T17:02:11+08:00" content="2015-09-30">
-            2015-09-30
+          <time itemprop="dateCreated" datetime="2015-10-23T08:54:12+08:00" content="2015-10-23">
+            2015-10-23
           </time>
         </span>
 
@@ -205,17 +199,23 @@
       
 
       
-        <span itemprop="articleBody"><p>这两天在实验虚拟机安装Gentoo，按照wiki的说明只分配了6G的硬盘，但是安装完系统又稍微装了点软件后根分区就只剩几百M的容量了，只好再扩大一下了。</p>
-<p>###1.扩展VMware虚拟机的硬盘容量<br>两种方法：</p>
+        <span itemprop="articleBody"><p>上次在虚拟机上装了Ubuntu14.04服务器用来做测试，因为只在内网使用，而且路由器上做了MAC地址绑定，改动比较麻烦，因此服务器只是设定了内网地址。但是Ubuntu更新时需要连接外网，而且也有连接外网下载一些东西的需要，就需要设定代理了。在网上搜索，找到了几个方法。</p>
 <ul>
-<li>10.0版本以上，点击<code>虚拟机</code>-&gt;<code>设置</code>，选中需要扩展的硬盘，<code>实用工具</code>-&gt;<code>扩展</code>，输入容量后点击<code>扩展</code>按钮即可。</li>
-<li>10.0版本以下，没有图形工具，使用安装目录下的命令行工具<code>vmware-vdiskmanager.exe</code>，<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line">  <span class="comment"># -x 参数为扩展硬盘，后跟需要扩展到的容量，文件名有空格时需要用" "引起来</span></span><br><span class="line"><span class="string">\VMware</span> PATH<span class="string">\vmware-vdiskmanager.exe</span> -x <span class="number">80</span>G <span class="string">\硬盘位置\硬盘文件名.vmdk</span></span><br></pre></td></tr></table></figure>
+<li>直接在终端中输入：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">export</span> http_proxy=http://username:password@ip:port  </span><br><span class="line"><span class="comment"># https代理将http_proxy改为https_proxy</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>很是方便。</p>
-<p>###2.linux下扩大根分区（/）大小<br><a id="more"></a><br>根分区设定的太小了，眼瞅着就要满了，赶紧扩大一下，用resize2fs命令就很好用，支持ext2/ext3/ext4。<br>首先需要一个可以卸载根分区的环境，因为是在虚拟机里装的，就用的liveCD文件做的启动盘。<br>启动到命令行下：<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ fsck -n /dev/sda4	 <span class="comment">#检查分区是否有错误，-n 代表仅显示在屏幕上，后接分区名称</span></span><br><span class="line">$ fdisk /dev/sda	<span class="comment">#进入fdisk</span></span><br></pre></td></tr></table></figure></p>
-<p>首先，选<code>d</code>删除sda4分区，然后选<code>n</code>新建分区，起始柱面与删除的分区相同，否则会丢失文件。最后选<code>w</code>保存退出。<br>接下来，使用resize2fs命令扩展分区<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ resize2fs /dev/sda4	</span><br><span class="line">$ e2fsck -fnv /dev/sda4		 <span class="comment">#强制检查分区</span></span><br></pre></td></tr></table></figure></p>
-<p>如此，就好了。</p>
+<p>本设置仅对当前终端有效，退出终端后失效。</p>
+<ul>
+<li>仅针对apt-get设定代理<br>用编辑软件打开<code>/etc/apt/apt.conf</code>文件，没有的话可以创建，在其中加入<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">Acquire</span>:<span class="value">:http::Proxy <span class="string">"http://username:password@ip:port"</span></span></span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如有ftp或https可以替换http并加入文件，保存即可</p>
+<ul>
+<li>永久设定代理<br>编辑<code>~/.bashrc</code>文件，加入：<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">http_proxy=http:<span class="comment">//username:password@ip:port</span></span><br><span class="line"><span class="keyword">export</span> http_proxy</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>保存后，输入命令<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></p>
+<p>这样，新打开的终端也可以使用了</p>
 </span>
       
     </div>
@@ -233,13 +233,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/23/ubuntuproxy/" rel="prev">Ubuntu服务器设置代理</a>
+              <a href="/2015/11/03/dotoday/" rel="prev">dotoday</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/09/15/yituanma/" rel="next">今天就是一团麻</a>
+              <a href="/2015/09/30/vmwarediskexpend/" rel="next">VMWare下扩展硬盘容量并增大根分区</a>
             
           </div>
         </div>
